@@ -10,7 +10,7 @@ import UIKit
 // MARK: - BetterSegmentedControl
 @IBDesignable open class BetterSegmentedControl: UIControl {
     // MARK: - IndicatorView
-    fileprivate class IndicatorView: UIView {
+    public class IndicatorView: UIView {
         // MARK: - Properties
         fileprivate let titleMaskView = UIView()
         
@@ -33,7 +33,7 @@ import UIKit
             finishInit()
         }
         
-        required init?(coder aDecoder: NSCoder) {
+        public required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
             finishInit()
         }
@@ -177,7 +177,7 @@ import UIKit
     // MARK: - Private properties
     fileprivate let titleLabelsView = UIView()
     fileprivate let selectedTitleLabelsView = UIView()
-    fileprivate let indicatorView = IndicatorView()
+    public let indicatorView = IndicatorView()
     fileprivate var initialIndicatorViewFrame: CGRect?
     
     fileprivate var tapGestureRecognizer: UITapGestureRecognizer!
